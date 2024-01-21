@@ -1,5 +1,5 @@
 # Restaurant Score Service
-There are Authorities which conduct inspections at Restaurants from time to time and report the corresponding scores. This is used to deduce the health score for restaurants. Moreover, the restaurants that not inspected for a long time ie. 1 year+ are required to be identified. 
+There are Authorities which conduct inspections at Restaurants from time to time and report the corresponding scores. This is used to deduce the health score for restaurants. Moreover, the restaurants that not inspected for a long time ie. more thatn 1 year, are required to be identified. 
 
 ![Screenshot 2024-01-21 at 12 14 20 AM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/0a1336fd-dba1-4d44-bb3d-57c7596e6689)
 
