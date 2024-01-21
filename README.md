@@ -106,7 +106,7 @@ Configuration classes provide bean specifications.
 
 
 ## Things Not addressed
-These are the points that are not addressed in the solution and a gist of how they can be implemented.
+Everything is written by me and there are points that are not addressed in the solution; a gist of how they can be implemented.
 - Auth: Authorities and Businesses can have their authentication and authorization. A JWT based client side auth solution can be implemented.
 - Validations: There are several places in the application where validations can be made. eg. Score range to be [0-100], etc.
 - Testing: Tests can be added to insure robustness, and can lead to even more validation being put in place.
