@@ -130,6 +130,6 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 ```
 
 ### Postman Collection
-Import the Postman Collection file present at root directory and access all the APIs
+Import the `Restaurant Score Service.postman_collection.json` file present at root directory and access all the APIs
 
 ![Screenshot 2024-01-21 at 2 02 57 PM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/34897cbb-4c8b-4018-bd79-e73a0e2780b9)
