@@ -5,9 +5,9 @@ There are Authorities which conduct inspections at Restaurants from time to time
 
 
 ## Terminology
-Business: The restaurants that the authorities inspect and add scores for. (Eg. McDonalds, 3rd Street, New York)  
-Authorities: The certified bodies that conduct inspections on restaurants and add scores. (Eg. Weld County, Colorado)  
-Inspection: A visit by an authority to a restaurant, having a corresponding score.  
+**Business**: The restaurants that the authorities inspect and add scores for. (Eg. McDonalds, 3rd Street, New York)  
+**Authorities**: The certified bodies that conduct inspections on restaurants and add scores. (Eg. Weld County, Colorado)  
+**Inspection**: A visit by an authority to a restaurant, having a corresponding score.  
 
 ## Functional Requirements
 - Create, view, update, delete Restaurant
