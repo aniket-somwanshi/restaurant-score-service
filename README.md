@@ -80,7 +80,7 @@ They have a dependency on corresponding services. These are service contract int
 
 ![Screenshot 2024-01-21 at 11 39 32 AM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/94bc77ab-9862-4995-84c3-ba7ffc15c856)
 
-Each service contracts have their implementation classes.
+Each service contracts have their implementation classes. These can also be replaced by a compliant layer of proxy, without the caller requiring any change.
 
 ![Screenshot 2024-01-21 at 11 41 21 AM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/e15bdb8b-d825-4151-8854-13630550ab57)
 
