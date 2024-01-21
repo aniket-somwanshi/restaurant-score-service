@@ -128,3 +128,6 @@ spring.datasource.username= {mysql_server_username}
 spring.datasource.password= {mysql_server_password}
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver 
 ```
+
+### Postman Collection
+Import the Postman Collection file and access all the APIs
