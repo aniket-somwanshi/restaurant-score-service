@@ -67,7 +67,7 @@ private int expirationMonths;
 Compute all outdated restaurants according to given expirationMonths criteria
 ```
 @Query("SELECT * FROM `score-service`.`business` " +
-	           "WHERE last_scored_at < DATE_SUB(CURRENT_TIMESTAMP, INTERVAL :expirationMonths MONTH)")
+"WHERE last_scored_at < DATE_SUB(CURRENT_TIMESTAMP, INTERVAL :expirationMonths MONTH)")
 List<Business> getAllOutdatedBusinesses(@Param("expirationMonths") int expirationMonths);
 ```
 
