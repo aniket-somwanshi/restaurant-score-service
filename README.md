@@ -110,7 +110,7 @@ These are the points that are not addressed in the solution and a gist of how th
 - Auth: Authorities and Businesses can have their authentication and authorization. A JWT based client side auth solution can be implemented.
 - Validations: There are several places in the application where validations can be made. eg. Score range to be [0-100], etc.
 - Testing: Tests can be added to insure robustness, and can lead to even more validation being put in place.
-- Dockerisation: The application and the Db can be dockerised to be able be run together with a single docker compose up command.
+- Dockerisation: The application and the Db can be dockerised to be able be run together with a single docker-compose up command.
  
 ## Setup
 
