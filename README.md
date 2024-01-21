@@ -120,7 +120,7 @@ These are the points that are not addressed in the solution and a gist of how th
 - Run `java -jar target/score_service-0.0.1-SNAPSHOT.jar`
 - Alternatively, run the cloned project in an IDE viz. Eclipse
 - Install MySql and Start server
-- Import the .sql file from the project root directory.
+- Import the ScoreService.sql file from the project root directory.
 - Configure the application.properties file with MySql credentials.
 ```
 spring.datasource.url=jdbc:mysql://localhost:{mysql_server_port}/score-service
@@ -130,4 +130,6 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 ```
 
 ### Postman Collection
-Import the Postman Collection file and access all the APIs
+Import the Postman Collection file present at root directory and access all the APIs
+
+![Screenshot 2024-01-21 at 2 02 57 PM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/34897cbb-4c8b-4018-bd79-e73a0e2780b9)
