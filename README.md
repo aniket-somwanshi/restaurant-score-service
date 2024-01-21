@@ -1,7 +1,8 @@
 # Restaurant Score Service
 There are Authorities which conduct inspections at Restaurants from time to time and report the corresponding scores. This is used to deduce the health score for restaurants. Moreover, the restaurants that not inspected for a long time ie. 1 year+ are required to be identified. 
 
-![Screenshot 2024-01-21 at 12 14 20 AM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/cf3d8154-0b00-400a-9983-6330843c3136)
+![Screenshot 2024-01-21 at 12 14 20 AM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/0a1336fd-dba1-4d44-bb3d-57c7596e6689)
+
 
 ## Terminology
 Business: The restaurants that the authorities inspect and add scores for. (Eg. McDonalds, 3rd Street, New York)  
@@ -23,7 +24,8 @@ Inspection: A visit by an authority to a restaurant, having a corresponding scor
 - Health Score calculation strategy may need to be able to change independently. Different strategies of health score calculation can be: Most recent score, Average of all the scores, Custom logic factoring in penalties for each instance of <30 scores.
 
 ## Primary Entities
-![Screenshot 2024-01-21 at 10 48 18 AM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/966dd91f-6bb5-4fdf-9548-0e2d73830175)
+![Screenshot 2024-01-21 at 11 13 26 AM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/6d06daa0-7783-4e8f-874a-b96c44c6190c)
+
 
 ## Decisions and tradeOffs
 ### Outdated Status of Restaurants
@@ -47,7 +49,7 @@ Following are the approaches along with the pros and cons:
 ### Health Score Strategy
 For a restaurant, there are scores added by authorities. There can be many ways to calculate a single health score based on all these scores. eg. Most recent score, Average score, custom logic based on penalties for severely bad scores, etc. These strategies can vary independently. Thus, HealthStrategy interface is created and different concrete implementations provide different strategies. We can inject one of these strategies. In future, a new strategy can be created without the caller requiring any change.
 
-![Screenshot 2024-01-21 at 10 19 37 AM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/694a4d8c-2b76-46b0-84c9-95649a2906c6)
+![Screenshot 2024-01-21 at 11 14 05 AM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/a1a08ac8-1ca6-4a5e-b59d-bd2371de4e30)
 
 ### Outdated Restaurants policy
 The policy of the time period after which the restaurants are considered "outdated" can change in future according to regulations, business requirements, etc. Moreover, in future different business types, cities might be subject to different expiration time period. Thus, to be able to vary the expiration months independently, application property is used. Also, the business entity keeps track of the last_scored_at timestamp, so that we can query for 'outdated criteria' with a custom expiration time.
