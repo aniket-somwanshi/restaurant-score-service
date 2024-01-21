@@ -113,5 +113,18 @@ These are the points that are not addressed in the solution and a gist of how th
 - Dockerisation: The application and the Db can be dockerised to be able be run together with a single docker-compose up command.
  
 ## Setup
-
-
+- Clone the repository.
+- Install Java.
+- Install Maven.
+- Run `mvn install` at project root directory.
+- Run `java -jar target/score_service-0.0.1-SNAPSHOT.jar`
+- Alternatively, run the cloned project in an IDE viz. Eclipse
+- Install MySql and Start server
+- Import the .sql file from the project root directory.
+- Configure the application.properties file with MySql credentials.
+```
+spring.datasource.url=jdbc:mysql://localhost:{mysql_server_port}/score-service
+spring.datasource.username= {mysql_server_username}
+spring.datasource.password= {mysql_server_password}
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver 
+```
