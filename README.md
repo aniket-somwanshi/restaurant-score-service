@@ -71,10 +71,47 @@ Compute all outdated restaurants according to given expirationMonths criteria
 List<Business> getAllOutdatedBusinesses(@Param("expirationMonths") int expirationMonths);
 ```
 
-## Things not addressed
+### Codebase overview
+There are 3 Controllers pertaining to specific entities
+
+![Screenshot 2024-01-21 at 11 39 11 AM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/2a99ed07-5da2-4b00-9041-e1205ca22534)
+
+They have a dependency on corresponding services. These are service contract interfaces thus the callers do not depend on concrete service implementations.
+
+![Screenshot 2024-01-21 at 11 39 32 AM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/94bc77ab-9862-4995-84c3-ba7ffc15c856)
+
+Each service contracts have their implementation classes.
+
+![Screenshot 2024-01-21 at 11 41 21 AM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/e15bdb8b-d825-4151-8854-13630550ab57)
+
+These services communicate with the repositories for access to and from the persistant data store.
+
+![Screenshot 2024-01-21 at 11 42 42 AM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/2f04f1a8-d42d-4ff0-96c4-c39881a1afb2)
+
+The data store entities have representation models.
+
+![Screenshot 2024-01-21 at 11 44 53 AM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/19c91b3c-766b-4753-9ca6-a85644827f3f)
+
+Services make use of strategies by injection.
+
+![Screenshot 2024-01-21 at 11 46 53 AM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/748d4945-a47a-4bea-972c-942eb1bf79fe)
+
+Services make use of custom exception classes.
+
+![Screenshot 2024-01-21 at 11 48 11 AM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/92093c3b-0661-4bbd-a10f-79b5aed765de)
+
+Configuration classes provide bean specifications.
+
+![Screenshot 2024-01-21 at 11 49 17 AM](https://github.com/aniket-somwanshi/restaurant-score-service/assets/53231464/f4d3864d-808f-4c0d-825f-a41bac8f4ae8)
+
+
+## Things Not addressed
 These are the points that are not addressed in the solution and a gist of how they can be implemented.
 - Auth: Authorities and Businesses can have their authentication and authorization. A JWT based client side auth solution can be implemented.
 - Validations: There are several places in the application where validations can be made. eg. Score range to be [0-100], etc.
 - Testing: Tests can be added to insure robustness, and can lead to even more validation being put in place.
+- Dockerisation: The application and the Db can be dockerised to be able be run together with a single docker compose up command.
  
 ## Setup
+
+
